@@ -24,8 +24,8 @@ See the table below for a list of supported target frameworks:
 When using ASP.Net Core 2.1, all the configuration should be done at the `Program.cs` file, as shown below.
 
 How does it work? The `ConfigureAppConfiguration` delegate defines the host configuration options, which
-are then used into the `ConfigureLogging` delegate to setup the required Kaive Log Settings. Finally,
-the `UseKaiveLogging` extension method injects its own custom Logger Factory, which will forward all
+are then used into the `ConfigureLogging` delegate to setup the required Log Settings. Finally,
+the `UseLogging` extension method injects its own custom Logger Factory, which will forward all
 logger requests to the required sinks, as per configured settings.
 
 ```csharp
