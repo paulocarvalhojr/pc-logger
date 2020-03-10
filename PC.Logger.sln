@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PC.Logger", "src\Acesso.Sdk.Logger\PC.Logger.csproj", "{91E312C0-F506-417F-B9C8-5A88E47DF1F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{56770302-26DD-4129-83A5-FAEA43F6B514}"
+	ProjectSection(SolutionItems) = preProject
+		src\readme.md = src\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0F4BBE75-41E0-4C63-9A58-ABF0A5A27D64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{482EDC07-BC6C-4D58-BEF2-9E6E99E2FB86}"
+	ProjectSection(SolutionItems) = preProject
+		tools\Resources.tt = tools\Resources.tt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91E312C0-F506-417F-B9C8-5A88E47DF1F2} = {56770302-26DD-4129-83A5-FAEA43F6B514}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {434D2E04-F9FE-4CCD-B9CE-57BD7E7C6DFD}
+	EndGlobalSection
+EndGlobal
