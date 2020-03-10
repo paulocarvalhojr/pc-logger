@@ -1,17 +1,11 @@
 
-# Kaive.Extensions.Logging
+# PC.Logging
 
-VSTS Status: [![VSTS](https://img.shields.io/vso/build/vertisnet/62009b64-8b3f-4d27-93c2-95512cf9951f/11.svg)](https://vertisnet.visualstudio.com/Product_Development/_build/index?context=allDefinitions&path=\Kaive&definitionId=11&_a=completed)
-
-# Introduction
-
-The _Kaive.Extensions.Logging_ repository includes projects containing the common logging definitions, including types used for multiple logging pipeline configurations.
-
-This repository is part of **Kaive Platform**. You can find samples, documentation and getting started instructions for **Kaive Platform** at the main [Kaive](https://vertisnet.visualstudio.com/Product_Development/_git/Kaive) repo.
+The PC.Logging_ repository includes projects containing the common logging definitions, including types used for multiple logging pipeline configurations.
 
 # Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For a full list of available versions, see the [tags on this repository](https://vertisnet.visualstudio.com/Product_Development/_git/Kaive.Extensions.Common/tags)
+We use [SemVer](http://semver.org/) for versioning. For a full list of available versions
 
 # Target Frameworks
 
@@ -83,7 +77,7 @@ logger requests to the required sinks, as per configured settings.
                     if (!LogManager.GetInstance().IsConfigured)
                         LogManager.Setup(hostingContext.Configuration.GetLogSettings());
                 })
-                .UseKaiveLogging()
+                .UseLogging()
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
