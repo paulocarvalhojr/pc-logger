@@ -15,6 +15,7 @@ using System.Linq;
 using System.Net;
 using PC.Logger.Extensions;
 using PC.Shared;
+using Rebus.Config;
 
 namespace PC.Logger
 {
@@ -114,7 +115,9 @@ namespace PC.Logger
             return new LoggerConfiguration()
                 .MinimumLevel.Verbose()
                 .Enrich.FromLogContext()
-                .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                .Enrich.FromMassTransit();
         }
 
         private Serilog.ILogger CreatePipelineLogger(ILogPipelineProvider extraPipelineProvider = null)
@@ -129,7 +132,9 @@ namespace PC.Logger
             var pipelineConfiguration = new LoggerConfiguration()
                 .MinimumLevel.ControlledBy(pipelineLevelSwitch)
                 .Enrich.FromLogContext()
-                .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                .Enrich.FromMassTransit(); ;
 
             const string extraPipelineFilter = "IsExtraLogPipeline = true";
             if (extraPipelineProvider != null)
@@ -156,7 +161,9 @@ namespace PC.Logger
                         mongoDbLogConfiguration
                             .MinimumLevel.ControlledBy(levelSwitch)
                             .Enrich.FromLogContext()
-                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                            .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                            .Enrich.FromMassTransit();
 
                         mongoDbLogConfiguration
                             .WriteTo.MongoDBCapped(logSettings.MongoDb.ConnectionString, cappedMaxSizeMb: 512L,
@@ -187,7 +194,9 @@ namespace PC.Logger
                         slackLogConfiguration
                             .MinimumLevel.ControlledBy(levelSwitch)
                             .Enrich.FromLogContext()
-                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                            .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                            .Enrich.FromMassTransit();
 
                         slackLogConfiguration
                             .WriteTo.Slack(slackOptions,
@@ -220,7 +229,9 @@ namespace PC.Logger
                         emailLogConfiguration
                             .MinimumLevel.ControlledBy(levelSwitch)
                             .Enrich.FromLogContext()
-                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                            .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                            .Enrich.FromMassTransit();
 
                         emailLogConfiguration
                             .WriteTo.Email(emailOptions, mailSubject: settings.Subject,
@@ -241,7 +252,9 @@ namespace PC.Logger
                         seqLogConfiguration
                             .MinimumLevel.ControlledBy(levelSwitch)
                             .Enrich.FromLogContext()
-                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                            .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                            .Enrich.FromMassTransit();
 
                         seqLogConfiguration
                             .WriteTo.Seq(settings.Host, apiKey: settings.ApiKey);
@@ -261,7 +274,9 @@ namespace PC.Logger
                         elasticSearchLogConfiguration
                             .MinimumLevel.ControlledBy(levelSwitch)
                             .Enrich.FromLogContext()
-                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog);
+                            .Enrich.WithEnvironmentVariables(EnvironmentVariablesToLog)
+                            .Enrich.WithRebusCorrelationId(TransactionIdLogPropertyName)
+                            .Enrich.FromMassTransit();
 
                         elasticSearchLogConfiguration
                             .WriteTo.Elasticsearch(settings.Host, settings.IndexName);
