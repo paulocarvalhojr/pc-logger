@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{482EDC07
 		tools\Resources.tt = tools\Resources.tt
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PC.Logger.Extensions.Http", "src\PC.Logger.Extensions.Http\PC.Logger.Extensions.Http.csproj", "{0783DE7D-D769-4C94-8F70-FBCCDF883C29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,12 +29,17 @@ Global
 		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91E312C0-F506-417F-B9C8-5A88E47DF1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0783DE7D-D769-4C94-8F70-FBCCDF883C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0783DE7D-D769-4C94-8F70-FBCCDF883C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0783DE7D-D769-4C94-8F70-FBCCDF883C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0783DE7D-D769-4C94-8F70-FBCCDF883C29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{91E312C0-F506-417F-B9C8-5A88E47DF1F2} = {56770302-26DD-4129-83A5-FAEA43F6B514}
+		{0783DE7D-D769-4C94-8F70-FBCCDF883C29} = {56770302-26DD-4129-83A5-FAEA43F6B514}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {434D2E04-F9FE-4CCD-B9CE-57BD7E7C6DFD}
