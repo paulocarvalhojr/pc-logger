@@ -56,7 +56,7 @@ namespace PC.Logger
         private readonly Dictionary<string, LoggingLevelSwitch> _overrideLevelSwitches =
             new Dictionary<string, LoggingLevelSwitch>();
 
-        protected bool IsDevelopment => false;//TODO: KaiveSettings.IsDevelopment;
+        protected bool IsDevelopment => false;
 
         public bool IsConfigured { get; private set; }
 
