@@ -1,7 +1,7 @@
 
 # PC.Logging
 
-The PC.Logging_ repository includes projects containing the common logging definitions, including types used for multiple logging pipeline configurations.
+The PC.Logging repository includes projects containing the common logging definitions, including types used for multiple logging pipeline configurations.
 
 # Versioning
 
@@ -37,7 +37,7 @@ logger requests to the required sinks, as per configured settings.
 	    /// <summary>
 	    /// Application's entry point.
 	    /// </summary>
-	    /// <param name="args">Argumentos de inicialização.</param>
+	    /// <param name="args">Argumentos de inicializaÃ§Ã£o.</param>
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
